@@ -36,7 +36,7 @@ const Select: FC<Props> = ({ label, id, name, value, onChange, options }) => {
       <label htmlFor={id}>{label}</label>
       <div>
         <select {...selectProps}>
-          {options.map((option) => (
+          {options.map((option: OptionProp) => (
             <Option key={option.value} {...option} />
           ))}
         </select>
