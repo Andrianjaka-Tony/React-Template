@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, FocusEvent, useState } from "react";
+import { ChangeEventHandler, FocusEvent, useState, FC } from "react";
 import "./Input.scss";
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
   onChange: ChangeEventHandler<HTMLInputElement>;
 }
 
-const Input: React.FC<Props> = ({
+const Input: FC<Props> = ({
   label = "",
   id = "",
   type = "text",
