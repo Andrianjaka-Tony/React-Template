@@ -29,7 +29,7 @@ const Input: FC<Props> = ({
     htmlFor: id,
   };
 
-  const handleFocus = () => {
+  const handleFocus = (event: FocusEvent<HTMLInputElement>) => {
     setFocus(true);
   };
 
@@ -42,7 +42,7 @@ const Input: FC<Props> = ({
 
   const inputProps = {
     id,
-    type,
+    type: isFocus ? type : "text",
     name,
     value,
     autoComplete,
